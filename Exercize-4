@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Linq;
+using System.Net.Cache;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int picturesInRow = 3;
+            int picturesInAlbom = 52;
+
+            int filledRows = picturesInAlbom / picturesInRow;
+            int picturesOutRow = picturesInAlbom % picturesInRow;
+            Console.WriteLine($"Всего заполненных рядов: {filledRows}, осталось картинок: {picturesOutRow}.");
+
+        }
+
+    }
+}
