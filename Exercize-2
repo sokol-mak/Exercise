@@ -19,37 +19,39 @@ namespace ConsoleApp1
             string userZodiac;
             string userWorkPlase;
             string confirmation;
+            bool isWork = true;
 
-            Console.WriteLine("Регистрация\n");
-            Console.Write("Как вас зовут: ");
-            userFirstName = Console.ReadLine();
-            Console.Write("Сколько вам лет: ");
-            userAge = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Кто вы по знаку зодиака: ");
-            userZodiac = Console.ReadLine();
-            Console.Write("Где вы работаете: ");
-            userWorkPlase = Console.ReadLine();
+            while (isWork)
+            { 
+                Console.WriteLine("Регистрация\n");
+                Console.Write("Как вас зовут: ");
+                userFirstName = Console.ReadLine();
+                Console.Write("Сколько вам лет: ");
+                userAge = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Кто вы по знаку зодиака: ");
+                userZodiac = Console.ReadLine();
+                Console.Write("Где вы работаете: ");
+                userWorkPlase = Console.ReadLine();
 
-            Console.Write("\nДавайте проверим точность записанных данных!\n");
-            Console.WriteLine($"Вас зовут {userFirstName}, вам {userAge}, вы {userZodiac} по знаку зодиака, ваша работа: {userWorkPlase}.\n");
-            Console.WriteLine("Всё верно?");
-            confirmation = Console.ReadLine();
-            confirmation = confirmation.ToLower();
+                Console.Write("\nДавайте проверим точность записанных данных!\n");
+                Console.WriteLine($"Вас зовут {userFirstName}, вам {userAge}, вы {userZodiac} по знаку зодиака, ваша работа: {userWorkPlase}.\n");
+                Console.WriteLine("Всё верно?");
+                confirmation = Console.ReadLine();
+                confirmation = confirmation.ToLower();
 
-            if (confirmation == "да")
-            {
-                Console.WriteLine("Поздравляем вас с успешной регистрацией!");
+                if (confirmation == "да")
+                {
+                    Console.WriteLine("Поздравляем вас с успешной регистрацией!");
+                    isWork = false;
+                }
+                else if (confirmation == "нет")
+                {
+                    Console.WriteLine("Пройдите регистрацию ещё раз!");
+                }
+                else
+                {
+                    Console.WriteLine("Введена неверная операция!");
+                }
             }
-            else if (confirmation == "нет")
-            {
-                Console.WriteLine("Пройдите регистрацию ещё раз!");
-            }
-            else
-            {
-                Console.WriteLine("Введена неверная операция!");
-            }
-
-        }
-
     }
 }
