@@ -14,16 +14,16 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            int testInt;
-            uint testUint;
-            float testFloat;
-            double testDouble;
-            bool testBool;
-            string testString;
-            byte[] testBytes;
-            sbyte[] testBytes2;
-            char[] testChars;
-            long testLong;
+            int numberPhone;
+            uint bankProfit;
+            float middleScore;
+            double numberPi;
+            bool isClose;
+            string new;
+            byte[] age;
+            sbyte[] tempirature;
+            char[] possibleAnswer;
+            long grossDomesticProduct;
 
         }
 
