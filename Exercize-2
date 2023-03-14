@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Linq;
+using System.Net.Cache;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string userFirstName;
+            int userAge;
+            string userZodiac;
+            string userWorkPlase;
+
+            Console.WriteLine("Регистрация\n");
+            Console.Write("Как вас зовут: ");
+            userFirstName = Console.ReadLine();
+            Console.Write("Сколько вам лет: ");
+            userAge = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Кто вы по знаку зодиака: ");
+            userZodiac = Console.ReadLine();
+            Console.Write("Где вы работаете: ");
+            userWorkPlase = Console.ReadLine();
+
+            Console.Write("\nДавайте проверим точность записанных данных!\n");
+            Console.WriteLine($"Вас зовут {userFirstName}, вам {userAge}, вы {userZodiac} по знаку зодиака, ваша работа: {userWorkPlase}.");
+
+        }
+
+    }
+}
