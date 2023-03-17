@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Linq;
+using System.Net.Cache;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int peopleInLine;
+            int timeOfReceiptInMinutes = 10;
+            int minutesInHour = 60;
+
+            Console.Write("Введите количество человек в очереди: ");
+            peopleInLine = Convert.ToInt32(Console.ReadLine());
+
+            int generalWaitingTimeInMinutes = peopleInLine * timeOfReceiptInMinutes;
+            int waitingTimeInHours = generalWaitingTimeInMinutes / minutesInHour;
+            int waitingTimeInMinutes = generalWaitingTimeInMinutes%minutesInHour;
+
+            Console.WriteLine($"Вам осталось ждать: {waitingTimeInHours} часов, {waitingTimeInMinutes} минут.");
+        }
+    }
+}
