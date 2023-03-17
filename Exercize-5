@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Linq;
+using System.Net.Cache;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int goldInPurse;
+            int cristalInPurse;
+            int costCristal = 10;
+            int cristalsNeed;
+
+            Console.Write("Введите количество кристаллов: ");
+            cristalInPurse = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Введите количество имеющегося золота: ");
+            goldInPurse = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Сколько вы хотите купить кристаллов: ");
+            cristalsNeed = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Сделка успешно состоялась!");
+            
+            int swapGoldToCristals = costCristal * cristalsNeed;
+            cristalInPurse += cristalsNeed;
+            goldInPurse -= swapGoldToCristals;
+            Console.WriteLine($"У вас осталось {goldInPurse} золота и {cristalInPurse} кристаллов.");
+        }
+    }
+}
